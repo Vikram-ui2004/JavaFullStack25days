@@ -1,0 +1,43 @@
+* {
+  margin: 0%;
+  padding-top: 2rem;
+  background-color: aquamarine;
+}
+
+#container1 {
+  display: flex;
+  justify-content: center;
+  justify-items: center;
+  flex-direction: column;
+  gap: 20px;
+  height: 30rem;
+  width: 30rem;
+  background-color: rgb(92, 158, 196);
+  margin: auto;
+  border-radius: 2rem;
+}
+#container2 {
+  display: flex;
+  justify-content: center;
+  justify-items: center;
+  gap: 30px;
+  background-color: rgb(92, 158, 196);
+}
+#value {
+  display: flex;
+  justify-content: center;
+  justify-items: center;
+  margin-bottom: 4rem;
+  text-align: center;
+  font-size: xx-large;
+  background-color: rgb(92, 158, 196);
+}
+
+.button {
+  border: 1px solid black;
+  padding: 4px 3px 4px 3px;
+  border-radius: 8px;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 2rem;
+  cursor: pointer;
+}

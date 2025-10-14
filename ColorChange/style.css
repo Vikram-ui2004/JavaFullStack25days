@@ -1,0 +1,39 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    margin: 0;
+    font-family: sans-serif;
+    background-color: #f0f0f0;
+}
+
+.box {
+    width: 200px;
+    height: 200px;
+    border: 2px solid #333;
+    margin-bottom: 20px;
+    transition: background-color 0.3s ease-in-out; /* Smooth transition for color change */
+}
+
+.button-container {
+    display: flex;
+    gap: 10px;
+}
+
+.color-button {
+    padding: 10px 15px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    color: white;
+}
+
+/* Specific button colors */
+.color-button[data-color="red"] { background-color: red; }
+.color-button[data-color="blue"] { background-color: blue; }
+.color-button[data-color="green"] { background-color: green; }
+.color-button[data-color="purple"] { background-color: purple; }
+.color-button[data-color="orange"] { background-color: orange; }
