@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ClimaVista - Modern Weather Dashboard</title>
+ 
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body class="p-4 sm:p-8">
+
+    <div id="app" class="max-w-7xl mx-auto">
+        
+
+        <header class="mb-8 flex flex-col md:flex-row items-center justify-between gap-4">
+            <h1 class="text-3xl font-extrabold text-white tracking-tight">ClimaVista</h1>
+            <div class="flex w-full md:w-auto space-x-2">
+                <input
+                    type="text"
+                    id="city-input"
+                    placeholder="Search city (e.g., Tokyo, London)"
+                    class="flex-grow p-3 rounded-xl card text-white focus:ring-2 focus:ring-blue-500 focus:outline-none placeholder-gray-500"
+                >
+                <button
+                    id="search-btn"
+                    class="p-3 rounded-xl bg-blue-600 hover:bg-blue-700 transition-colors font-semibold flex items-center justify-center"
+                    onclick="handleSearch()"
+                >
+                    <i data-lucide="search" class="w-5 h-5"></i>
+                </button>
+            </div>
+        </header>
+
+ 
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+
+           
+            <section id="current-panel" class="lg:col-span-2 card p-6 md:p-8 rounded-2xl flex flex-col justify-between">
+           
+                <div id="current-weather-content">
+                    <div class="flex justify-center items-center h-48">
+                        <div class="loader"></div>
+                    </div>
+                </div>
+            </section>
+
+          
+            <section id="daily-forecast" class="lg:col-span-1 flex flex-col gap-4">
+                <h2 class="text-xl font-bold mb-2 text-gray-300">7-Day Forecast</h2>
+                <!-- Daily forecast items go here -->
+                <div class="flex justify-center items-center h-48 card rounded-2xl p-4">
+                    <p class="text-gray-400">Loading forecast...</p>
+                </div>
+            </section>
+        </div>
+
+
+        <section class="mt-8">
+            <h2 class="text-xl font-bold mb-4 text-gray-300">Hourly Outlook & Highlights</h2>
+            <div id="hourly-outlook" class="flex overflow-x-auto gap-4 p-2">
+           
+                <div class="flex justify-center items-center h-24 w-full card rounded-2xl p-4">
+                    <p class="text-gray-400">Loading hourly data...</p>
+                </div>
+            </div>
+        </section>
+    </div>
+<script src="./script.js" ></script>
+</body>
+</html>
